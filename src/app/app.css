@@ -1,3 +1,9 @@
+.container {
+  transform: scale(0.8); /* Уменьшает всё на 20% */
+  transform-origin: top center; /* Точка масштабирования */
+  width: 125%; /* Компенсируем уменьшение (100%/0.8) */
+  margin-left: -12.5%; /* Центрируем */
+}
 /* Основные стили контейнера */
 .feedback-frame {
     position: relative;
