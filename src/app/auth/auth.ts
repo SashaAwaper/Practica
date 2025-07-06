@@ -8,7 +8,7 @@ export class Auth {
   http = inject(HttpClient)
 
   generateCaptcha() {
-    return this.http.get('https://localhost:7118/api/feedback/captcha');
+    return this.http.get ('https://localhost:7118/api/feedback/captcha');
   }
   
   login(payload: any) {
