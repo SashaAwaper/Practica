@@ -8,7 +8,7 @@ export class Auth {
   http = inject(HttpClient)
 
   generateCaptcha() {
-    return this.http.get ('https://localhost:7118/api/feedback/captcha');
+    return this.http.get ('https://formcom.loca.lt/api/feedback/captcha');
   }
   
   login(payload: any) {
@@ -24,13 +24,13 @@ export class Auth {
   };
   
   return this.http.post(
-    'https://localhost:7118/api/feedback/submit', 
+    'https://formcom.loca.lt/api/feedback/submit', 
     transformedData
   );
 }
   
   getTopic(){
-    return this.http.get('https://localhost:7118/api/feedback/topics')
+    return this.http.get('https://formcom.loca.lt/api/feedback/topics')
     
   }
 
