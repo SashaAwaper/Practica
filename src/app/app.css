@@ -1,0 +1,347 @@
+/* Основные стили контейнера */
+.feedback-frame {
+    position: relative;
+    width: 1000px;
+    height: 630px;
+    margin: 90px auto 40px;
+    padding: 50px;
+    background-color: #dfdcdc;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.feedback-frame-extra {
+    position: relative;
+    top: 200px;
+    width: 100px;
+    height: 63px;
+    margin: 90px auto 40px;
+    padding: 50px;
+    background-color: #dfdcdc;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Заголовок формы */
+.top-left {
+    position: absolute;
+    top: -5px;
+    left: -40px;
+    width: 500px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #ffae00;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    z-index: 1;
+}
+
+.label-extra {
+    position: relative;
+    top: -5px;
+    display: block;
+    padding: 20px 0 0 40px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Строки формы - ОСНОВНЫЕ ИЗМЕНЕНИЯ ЗДЕСЬ */
+.form-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.form-row label {
+    position: relative;
+    top: 50px;
+    left: -25px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222121;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Общие стили для полей ввода */
+.feedback-frame input,
+.feedback-frame textarea {
+    position: relative;
+    top: 50px;
+    flex: 1;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Специальные стили для поля сообщения */
+.extra-input {
+    height: 100px !important;
+    resize: vertical;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+  }
+
+/* Стили кнопки - ИЗМЕНЕНО ВЫРАВНИВАНИЕ */
+.button_class {
+    position: relative;
+    top: 30px;
+    left: -350px;
+    display: block;
+    width: 250px;
+    height: 60px;
+    margin: 30px 0 0 auto; /* Изменено выравнивание */
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #ffae00;
+    color: #272727;
+    border: 1px solid #686767;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button_class:hover {
+    background-color: #ff9d00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button_class:active {
+    transform: scale(0.98);
+}
+
+.button_class:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.input-error {
+  border: 3px solid #ff0000 !important;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.5) !important;
+}
+
+.error-messages {
+  grid-column: 2;
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.error-messages div {
+  margin: 3px 0;
+}
+
+.button_class:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+select {
+  position: relative;
+  top: 50px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  appearance: none; /* Убирает дефолтные стрелки в некоторых браузерах */
+}
+
+select:focus {
+  border-color: #66afe9;
+  outline: none;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+
+
+select.input-error {
+  border-color: #ff0000;
+  background-color: #ffe6e6;
+}
+
+/* Контейнер для капчи */
+.captcha-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Блок с текстом капчи */
+.captcha-code {
+  position: relative;
+  top: 45px;
+  left: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border: 2px solid #ffae00;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222121;
+  user-select: none; /* Запрет копирования текста */
+  cursor: not-allowed; /* Индикатор, что это не интерактивный элемент */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  background: repeating-linear-gradient(
+    45deg,
+    #f8f8f8,
+    #f8f8f8 10px,
+    #e8e8e8 10px,
+    #e8e8e8 20px
+  );
+}
+
+/* Стили для кнопки обновления */
+.captcha-container button {
+  position: relative;
+  top: 45px;
+  left: -30px;
+  height: 40px;
+  padding: 0 15px;
+  background-color: #ffae00;
+  color: #272727;
+  border: 1px solid #686767;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.captcha-container button:hover {
+  background-color: #ff9d00;
+}
+
+.captcha-container button:active {
+  transform: scale(0.98);
+}
+
+.input-capthca{
+  position: relative;
+  top: -70px;
+  width: 40px !important;
+
+}
+
+.captcha-label{
+  position: relative;
+  left: 500px;
+  top: 10px;
+
+}
+
+/* Базовый контейнер */
+.container {
+  position: relative;
+  transition: filter 0.3s ease;
+}
+
+/* Затемнение фона */
+.dimmed {
+  filter: brightness(0.7);
+}
+
+/* Оверлей успеха */
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Карточка успеха */
+.success-card {
+  position: relative;
+  top: -70px;
+  background: rgb(248, 248, 248);
+  padding: 90px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: top;
+  max-width: 700px;
+  height: 450px;
+  width: 100%;
+  animation: fadeIn 0.3s ease-out;
+  font-size: 20px;
+}
+
+.success-card h3 {
+  position: relative;
+  top:-90px;
+  color: #faac03;
+
+}
+
+.success-card p {
+  color: #0f0f0f;
+  position: relative;
+  top: -70px;
+  left: -40px;
+  margin-bottom: 20px; /* Отступ между параграфами */
+  text-align: left; /* Выравнивание по левому краю */
+  padding: 0 45px; /* Горизонтальные отступы если нужно */
+  width: 100%; /* Занимает всю доступную ширину */
+  font-size: 22px;
+}
+
+.success-card button {
+  position: relative;
+  top: -50px;
+  left: 300px;
+  background: #ffae00;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.success-card button:hover {
+  background: #e69d00;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message-label{
+  position: relative;
+  top:-70px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.black-font{
+  position: relative;
+  top: -100px;
+  text-align: center;
+  color: #000000e7 !important;
+}

@@ -1,0 +1,116 @@
+
+
+<div class="container" [class.dimmed]="success">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="feedback-frame">
+    <div class="top-left">
+      <label class="label-extra">Напишите нам!</label>
+    </div>
+
+    <!-- Имя -->
+    <div class="form-row">
+      <label for="username">Введите Ваше имя:
+        
+      </label> 
+      <input
+        formControlName="username"
+        id="username" 
+        type="text" 
+        name="username" 
+        placeholder="Иван Иванов"
+        [class.input-error]="submitted && !form.controls.username.valid">
+    </div>
+
+    <!-- Email -->
+    <div class="form-row">
+      <label for="usermail">Введите Ваш Email:</label> 
+      <input 
+        formControlName="usermail"
+        id="usermail" 
+        type="email" 
+        name="usermail" 
+        placeholder="example@mail.ru"
+        [class.input-error]="submitted && !form.controls.usermail.valid">
+    </div>
+    
+    <!-- Телефон -->
+    <div class="form-row">
+      <label for="userphon">Ваш телефон:</label> 
+      <input 
+        formControlName="userphon"
+        id="userphon" 
+        type="tel" 
+        name="userphon" 
+        placeholder="+79991234567"
+        [class.input-error]="submitted && !form.controls.userphon.valid">
+    </div>
+
+    <!-- Тема -->
+   <div class="form-row select">
+      <label for="topic">Тема сообщения:</label> 
+      <select formControlName="topic" 
+      [class.input-error]="submitted && !form.controls.topic.valid">
+        @for (topic of topicList; track topic) {
+        <option [value]="topic" >{{topic}}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Сообщение -->
+    <div class="form-row extra-margin">
+      <label for="message">Ваше сообщение:</label> 
+      <textarea 
+        formControlName="message"
+        id="message" 
+        name="message" 
+        placeholder="Подробно опишите проблему" 
+        class="extra-input"
+        [class.input-error]="submitted && !form.controls.message.valid">
+      </textarea>
+    </div>
+
+    <!-- Капча -->
+    <div class="form-row captcha-label">
+    <label>Капча:</label>
+    <div class="captcha-container">
+      <div class="captcha-code">{{ captchaText }}</div>
+      <button type="button" (click)="loadCaptcha()">
+        Обновить
+      </button>
+    </div>
+  </div>
+
+  <div class="form-row input-capthca">
+    <label for="captcha">Введите капчу:</label>
+    <input 
+      formControlName="captcha"
+      id="captcha" 
+      type="text"
+      [class.input-error]="(submitted && !form.controls.captcha.valid) || captchaError">
+    <!-- Скрытое поле для captchaId -->
+    <input type="hidden" formControlName="captchaId">
+  </div>
+  
+    <div class="form-row">
+      <label></label> 
+      <button type="submit" class="button_class">Отправить</button>
+    </div>
+  </div>
+</form>
+</div>
+
+@if(success){
+   <div class="success-overlay">
+    <div class="success-card">
+      <h3 class="message-label">Сообщение отправлено!
+      <br> Мы ответим вам в ближайшее время </h3>
+      <h3 class="black-font">Содержимое сообщения</h3>
+      <p><strong>Имя:</strong> {{form.controls.username.value}}</p>
+      <p><strong>Электронная почта: </strong> {{form.controls.usermail.value}}</p>
+      <p><strong>Ваш телефон: </strong> {{form.controls.userphon.value}}</p>
+      <p><strong>Тема сообщения: </strong> {{form.controls.topic.value}}</p>
+      <p><strong>Ваше сообщение: </strong> {{form.controls.message.value}}</p>
+      <button (click)="closeSuccess()">OK</button>
+    </div>
+  </div>
+}
