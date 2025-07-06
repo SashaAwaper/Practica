@@ -2,7 +2,7 @@
 .feedback-frame {
     position: relative;
     width: 1000px;
-    height: 630px;
+    height: 760px;
     margin: 90px auto 40px;
     padding: 50px;
     background-color: #dfdcdc;
@@ -17,7 +17,7 @@
     width: 100px;
     height: 63px;
     margin: 90px auto 40px;
-    padding: 50px;
+    padding: 40px;
     background-color: #dfdcdc;
     border: 1px solid #333;
     border-radius: 10px;
@@ -54,7 +54,7 @@
     display: grid;
     grid-template-columns: 240px 1fr;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .form-row label {
@@ -92,7 +92,7 @@
 /* Стили кнопки - ИЗМЕНЕНО ВЫРАВНИВАНИЕ */
 .button_class {
     position: relative;
-    top: 30px;
+    top: -40px;
     left: -350px;
     display: block;
     width: 250px;
@@ -153,9 +153,10 @@ select {
   position: relative;
   top: 50px;
   padding: 15px;
+  height: 60px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: white;
   appearance: none; /* Убирает дефолтные стрелки в некоторых браузерах */
 }
@@ -177,20 +178,20 @@ select.input-error {
 .captcha-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 10px;
 }
 
 /* Блок с текстом капчи */
 .captcha-code {
   position: relative;
-  top: 45px;
+  top: 50px;
   left: -30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 40px;
+  width: 140px;
+  height: 60px;
   background-color: #f0f0f0;
   border: 2px solid #ffae00;
   border-radius: 5px;
@@ -213,9 +214,9 @@ select.input-error {
 /* Стили для кнопки обновления */
 .captcha-container button {
   position: relative;
-  top: 45px;
+  top: 50px;
   left: -30px;
-  height: 40px;
+  height: 50px;
   padding: 0 15px;
   background-color: #ffae00;
   color: #272727;
@@ -236,7 +237,7 @@ select.input-error {
 
 .input-capthca{
   position: relative;
-  top: -70px;
+  top: -105px;
   width: 40px !important;
 
 }
@@ -244,7 +245,7 @@ select.input-error {
 .captcha-label{
   position: relative;
   left: 500px;
-  top: 10px;
+  top: 5px;
 
 }
 
@@ -344,4 +345,17 @@ select.input-error {
   top: -100px;
   text-align: center;
   color: #000000e7 !important;
+}
+
+.nov-messages {
+  color: #791717; /* Красный цвет текста */
+  font-size: 22px; /* Читаемый размер */
+  position: absolute; /* Выводится поверх формы */
+  top: 10px; /* Сдвигаем вверх, над полем */
+  left: 230px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  z-index: 1; /* Чтобы было поверх других элементов */
+  white-space: nowrap; /* Текст не переносится */
+  
 }

@@ -24,7 +24,7 @@ export class App {
     username: new FormControl(null, [Validators.required, Validators.minLength(2), Validators.pattern(/^[a-zA-Zа-яА-ЯёЁ\s]+$/)]),
     usermail: new FormControl(null, [Validators.required, Validators.email]),
     userphon: new FormControl(null, [Validators.required, Validators.pattern(/^\d{10,15}$/)]),
-    topic: new FormControl(null, Validators.required),
+    topic: new FormControl(null, [Validators.required]),
     message: new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(500)]),
     captcha: new FormControl(null, Validators.required),
     captchaId: new FormControl(null, Validators.required) // Добавлено новое поле
