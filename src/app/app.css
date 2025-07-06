@@ -201,7 +201,7 @@ select.input-error {
   background-color: #f0f0f0;
   border: 2px solid #ffae00;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
   letter-spacing: 2px;
   color: #222121;
@@ -228,7 +228,7 @@ select.input-error {
   color: #272727;
   border: 1px solid #686767;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
