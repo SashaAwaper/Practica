@@ -62,7 +62,7 @@ export class App {
   onSubmit() {
     this.submitted = true;
     if (this.form.valid) {
-      // Убедимся, что captchaId актуален
+
       //@ts-ignore
       this.form.patchValue({ captchaId: this.captchaId });
       
@@ -88,9 +88,9 @@ export class App {
 
   closeSuccess() {
   this.success = false;
-  this.form.reset(); // Очищаем форму
-  this.submitted = false; // Сбрасываем флаг отправки
-  this.loadCaptcha(); // Обновляем капчу
+  this.form.reset(); 
+  this.submitted = false; 
+  this.loadCaptcha(); 
 }
 
 }

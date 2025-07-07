@@ -1,8 +1,8 @@
 .container {
-  transform: scale(0.8); /* Уменьшает всё на 20% */
-  transform-origin: top center; /* Точка масштабирования */
-  width: 125%; /* Компенсируем уменьшение (100%/0.8) */
-  margin-left: -12.5%; /* Центрируем */
+  transform: scale(0.8); 
+  transform-origin: top center; 
+  width: 125%; 
+  margin-left: -12.5%; 
 }
 /* Основные стили контейнера */
 .feedback-frame {
@@ -103,7 +103,7 @@
     display: block;
     width: 250px;
     height: 60px;
-    margin: 30px 0 0 auto; /* Изменено выравнивание */
+    margin: 30px 0 0 auto;
     padding: 15px;
     font-size: 20px;
     text-align: center;
@@ -164,7 +164,7 @@ select {
   border-radius: 4px;
   font-size: 18px;
   background-color: white;
-  appearance: none; /* Убирает дефолтные стрелки в некоторых браузерах */
+  appearance: none; 
 }
 
 select:focus {
@@ -205,8 +205,8 @@ select.input-error {
   font-weight: bold;
   letter-spacing: 2px;
   color: #222121;
-  user-select: none; /* Запрет копирования текста */
-  cursor: not-allowed; /* Индикатор, что это не интерактивный элемент */
+  user-select: none; 
+  cursor: not-allowed; 
   box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
   background: repeating-linear-gradient(
     45deg,
@@ -307,10 +307,10 @@ select.input-error {
   position: relative;
   top: -70px;
   left: -40px;
-  margin-bottom: 20px; /* Отступ между параграфами */
-  text-align: left; /* Выравнивание по левому краю */
-  padding: 0 45px; /* Горизонтальные отступы если нужно */
-  width: 100%; /* Занимает всю доступную ширину */
+  margin-bottom: 20px; 
+  text-align: left; 
+  padding: 0 45px; 
+  width: 100%; 
   font-size: 22px;
 }
 
@@ -354,14 +354,14 @@ select.input-error {
 }
 
 .nov-messages {
-  color: #791717; /* Красный цвет текста */
-  font-size: 22px; /* Читаемый размер */
-  position: absolute; /* Выводится поверх формы */
-  top: 10px; /* Сдвигаем вверх, над полем */
+  color: #791717;
+  font-size: 22px; 
+  position: absolute;
+  top: 10px; 
   left: 230px;
   padding: 2px 5px;
   border-radius: 3px;
-  z-index: 1; /* Чтобы было поверх других элементов */
-  white-space: nowrap; /* Текст не переносится */
+  z-index: 1;
+  white-space: nowrap; 
   
 }
